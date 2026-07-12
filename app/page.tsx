@@ -6,9 +6,9 @@ const USERS = ["user_1", "user_2", "user_5", "user_10", "user_42", "user_99"];
 
 export default function Home() {
   const [userId, setUserId] = useState("user_1");
-  const [results, setResults] = useState(null);
+  const [results, setResults] = useState<any[] | null>(null);
   const [loading, setLoading] = useState(false);
-  const [latency, setLatency] = useState(null);
+  const [latency, setLatency] = useState<number | null>(null);
 
   async function fetchRecs() {
     setLoading(true);
